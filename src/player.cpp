@@ -1,43 +1,8 @@
 #include "player.hpp"
 
 //Jarno's implementation:
-//*DUPLICATE IMPLEMENTATIONS HAVE BEEN COMMENTED OUT*
 //---------------------------------------------------------------------------------------------------------//
-    
-/*
-Player::Player(unsigned int x, unsigned int y)        DUPLICATE
-    {
-        position_.x = x;
-        position_.y = y;
-    }
 
-*/
-
-/*
-void Player::MovePlayer(char direction)        DUPLICATE
-{
-    // N = North, S = South, E = East, W = West
-    switch (direction)
-    {
-    case('N'):
-        position_.y += 1;
-        break;
-    case('S'):
-        position_.y += -1;
-        break;
-    case('E'):
-        position_.x += 1;
-        break;
-    case('W'):
-        position_.x += -1;
-        break;
-    default:
-        break;
-    }
-
-}
-
-*/
 
 
 void Player::GainXP(int amount)

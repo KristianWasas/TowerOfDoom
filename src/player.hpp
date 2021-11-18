@@ -10,11 +10,7 @@ using namespace std;
 
 //Jarno's implementation
 //---------------------------------------------------------------------------------------------------------//
-struct Position
-{
-    unsigned int x = 0;
-    unsigned int y = 0;
-};
+
 
 struct Stats
 {
@@ -33,6 +29,7 @@ struct Stats
 
 struct Weapon
 {
+    std::string name;
     unsigned int Weapon_Damage = 1;
     //Someone else might do weapons and in a different way, so be ready to make according changes...
 };
@@ -45,13 +42,6 @@ struct Inventory
     std::list<Weapon> weapons;
 };
 //---------------------------------------------------------------------------------------------------------//
-
-
-
-
-
-
-
 
 
 
@@ -119,20 +109,7 @@ public:
 
 
     //Jarno's implementation:
-    //*DUPLICATE IMPLEMENTATIONS HAVE BEEN COMMENTED OUT*
     //---------------------------------------------------------------------------------------------------------//
-    
-    
-    //Player(unsigned int x, unsigned int y);        DUPLICATE
-    //^Constructor
-
-    //void MovePlayer(char direction);        DUPLICATE
-    /**
-     * MovePlayer is given direction (N = North, S = South, E = East, W = West).
-     * Right arrow key = E ...
-     * Player position will move +-1 pixels.
-     * The destination position has been checked as free space before calling this method.
-    **/
 
 
     void GainXP(int);
@@ -146,7 +123,7 @@ public:
     //Adds item name as a key to the map and sets the amount
     //---------------------------------------------------------------------------------------------------------//
 
-
+    
 
 private:
     //Ville's implementation:
@@ -159,11 +136,7 @@ private:
     //---------------------------------------------------------------------------------------------------------//
 
     //Jarno's implementation:
-    //*DUPLICATE IMPLEMENTATIONS HAVE BEEN COMMENTED OUT*
     //---------------------------------------------------------------------------------------------------------//
-    
-    //Position position_;        DUPLICATE
-    //^struct for more informative position access (I.E player.position_.x)
 
     Stats stats_;
     std::map<std::string, bool> Perks_;
