@@ -7,7 +7,6 @@
 
 void Room::SetLevel(int level){
     level_=level;
-    cout<<level_<<endl;  
 }
 
 void Room::LoadRoom(string filename){
@@ -183,7 +182,6 @@ void Room::RemoveMonster(Monster * monster){
 }
 
 void Room::RandGen(int x, int y){
-        cout << "GENERATING" << endl;
         srand(time(NULL));
         int col = 0;
         int row = 0;

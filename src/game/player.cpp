@@ -882,12 +882,10 @@ void Player::Attack(){
                 } else if(Perks_["cleave"].second){ // if cleave is unlocked
                     if(dir.first==0){
                         if(y_ + dir.second == y && abs(x_ - x) == 1){
-                            cout<<"enemy attacked at"<<x-x_<<","<<y-y_<<endl;
                             dead = AttackEnemy(enemy, dmg/4);
                         }
                     } else {
                         if(x_ + dir.first == x && abs(y_ - y) == 1){
-                            cout<<"enemy attacked at"<<x-x_<<","<<y-y_<<endl;
                             dead = AttackEnemy(enemy, dmg/4);
                         }
                     }
@@ -984,7 +982,6 @@ bool Player::TakeDamage(unsigned int damage)
             return false;
         }
         stats_.current_HP = 0;
-        std::cout<<"PLAYER DIED!!!"<<std::endl;
         SetShieldandHeartTextures();
         return true;
     }

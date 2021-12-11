@@ -249,7 +249,7 @@ public:
         chanceForNoDrop = -20 + 20 * level;
         vector<vector<string>> dropsByLevel = vector<vector<string>>{
             vector<string>{"nice_helmet", "nice_legs", "scithersword"},
-            vector<string>{"gilded_shield", "nice_armor","cyan_old"},
+            vector<string>{"gilded_shield", "nice_armour","cyan_old"},
             vector<string>{"w_longsword_dark","w_axe_war_mithril"}
         };
         for(auto item : dropsByLevel[level-1]){

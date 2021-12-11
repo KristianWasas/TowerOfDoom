@@ -1,7 +1,6 @@
 #include "inventory.hpp"
 
 Inventory::Inventory(){
-    std::cout << "INITIALIZING INVENTORY" << "\n";
     //create buttons
     for(int i = 0; i<2; ++i){
         for(int j = 0; j<5; ++j){
@@ -52,7 +51,6 @@ Inventory::Inventory(){
     inventoryAddItem(new Item("w_shortsword_holy"));
     inventoryAddItem(new Item("repair_kit"));
     inventoryAddItem(new Item("apple"));
-    std::cout << "INVENTORY INITIALIZED" << "\n";
 };
 
 Inventory::~Inventory(){
