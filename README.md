@@ -1,4 +1,1 @@
-Nyt on valmis muiden tiedostoja varten, testailkaa itekin vähän mikä on sit mielestänne paras 
-grid size jokaselle tilelle, ite luulen et joku 30x30 pixelii on aika hyvä gametile koko
-
-
+Commits seen in master 3, dont know how to do this correctly lol
