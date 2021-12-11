@@ -57,7 +57,12 @@ Item* Ally::Buy(int index, int player_gold){
     if( !buystate[lastDialogue] ){
         return nullptr;
     } else {
-        lastDialogue = 'T'; // This sets the dialogue to the start
+        if(buystate[lastDialogue]){
+            lastDialogue = 'a'; // This sets the dialogue to the start
+        } else {
+            lastDialogue = 'T'; // This sets the dialogue to the start          
+        }
+
     }
     if(index>items_.size()){
         dialogue="\"No such item!\"";
