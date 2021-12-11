@@ -163,6 +163,7 @@ private:
         },
         map<char, bool>{
             {'T', true},
+            {'a', false},
         }
     };
     vector<map<string, pair<int, int>>> items_prices_stock_by_level = vector<map<string, pair<int, int>>>{
