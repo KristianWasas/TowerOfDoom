@@ -1,7 +1,6 @@
 #include "player.hpp"
 #include <constants>
-//Jarno's implementation:
-//---------------------------------------------------------------------------------------------------------//
+
 
 Player::Player(int x, int y, Room* room):x_(x),y_(y),room_(room){
 
