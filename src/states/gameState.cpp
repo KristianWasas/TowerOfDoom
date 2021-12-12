@@ -68,7 +68,6 @@ GameState::GameState(sf::RenderWindow* win) : State(1, win){
     rooms[24]->LoadRoom("rooms/f2/r20");
     rooms[25]->LoadRoom("rooms/f2/r21");
     rooms[26]->LoadRoom("rooms/f2/r22");
-    std::cout << "ROOMS CREATED" << "\n";
     for(int i=0;i<27;i++){
         rooms[i]->CreateVertexArray(rooms[i]->GetInputs());
     }
@@ -77,6 +76,8 @@ GameState::GameState(sf::RenderWindow* win) : State(1, win){
 
     player_.SetRoom(rooms_[1]);
     roomIndex_=1;
+
+    std::cout << "New game" << "\n";
 }
 
 GameState::~GameState(){
@@ -112,16 +113,6 @@ void GameState::updateState(){
     //Tässä kutsutaan sitten kaikki inputista tulevat komennot, eli updatataan pelaajan, itemien, monstereiden yms. objekteissa tapahtuvat muutokset riippuen inputista
     this->updateMousePos();
     this->pauseButt->updateButton(mousePos);
-    //TESTI HÄVIÄÄ PELIN
-    if(sf::Keyboard::isKeyPressed(sf::Keyboard::L)){
-        this->goNextState = true;
-        this->nextStateNum = 2;
-    }
-    //TESTI VOITTAA PELIN
-    if(sf::Keyboard::isKeyPressed(sf::Keyboard::V)){
-        this->goNextState = true;
-        this->nextStateNum = 3;
-    }
 
     //Tarkistaa onko pauseButton activoitu, jos on niin siirrytään seuraavaan stateen
     if(this->pauseButt->activated){
